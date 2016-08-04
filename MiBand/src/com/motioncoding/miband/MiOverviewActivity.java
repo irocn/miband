@@ -36,22 +36,47 @@ import com.motioncoding.miband.view.ColorPickerDialog;
 public class MiOverviewActivity extends Activity implements Observer {
 
 	private static final UUID UUID_MILI_SERVICE = UUID
-			.fromString("0000fee0-0000-1000-8000-00805f9b34fb");
+			.fromString("0000fee0-0000-1000-8000-00805f9b34fb"); //Y
 	private static final UUID UUID_CHAR_pair = UUID
-			.fromString("0000ff0f-0000-1000-8000-00805f9b34fb");
+			.fromString("0000ff0f-0000-1000-8000-00805f9b34fb"); //Y
 	private static final UUID UUID_CHAR_CONTROL_POINT = UUID
-			.fromString("0000ff05-0000-1000-8000-00805f9b34fb");
+			.fromString("0000ff05-0000-1000-8000-00805f9b34fb"); //Y
 	private static final UUID UUID_CHAR_REALTIME_STEPS = UUID
-			.fromString("0000ff06-0000-1000-8000-00805f9b34fb");
+			.fromString("0000ff06-0000-1000-8000-00805f9b34fb"); //Y
 	private static final UUID UUID_CHAR_ACTIVITY = UUID
-			.fromString("0000ff07-0000-1000-8000-00805f9b34fb");
+			.fromString("0000ff07-0000-1000-8000-00805f9b34fb"); //Y
 	private static final UUID UUID_CHAR_LE_PARAMS = UUID
-			.fromString("0000ff09-0000-1000-8000-00805f9b34fb");
+			.fromString("0000ff09-0000-1000-8000-00805f9b34fb"); //Y
 	private static final UUID UUID_CHAR_DEVICE_NAME = UUID
-			.fromString("0000ff02-0000-1000-8000-00805f9b34fb");
+			.fromString("0000ff02-0000-1000-8000-00805f9b34fb"); //Y
 	private static final UUID UUID_CHAR_BATTERY = UUID
-			.fromString("0000ff0c-0000-1000-8000-00805f9b34fb");
+			.fromString("0000ff0c-0000-1000-8000-00805f9b34fb"); //Y
 
+	/*
+./cz/zdenekhorak/mibandtools/b/n.java:33:  public static final UUID c = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "FEE0" })); y
+./cz/zdenekhorak/mibandtools/b/n.java:34:  public static final UUID d = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "FF01" })); 
+./cz/zdenekhorak/mibandtools/b/n.java:35:  public static final UUID e = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "FF02" })); y
+./cz/zdenekhorak/mibandtools/b/n.java:36:  public static final UUID f = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "FF03" }));
+./cz/zdenekhorak/mibandtools/b/n.java:37:  public static final UUID g = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "FF04" }));
+./cz/zdenekhorak/mibandtools/b/n.java:38:  public static final UUID h = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "FF05" })); y
+./cz/zdenekhorak/mibandtools/b/n.java:39:  public static final UUID i = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "FF06" })); y
+./cz/zdenekhorak/mibandtools/b/n.java:40:  public static final UUID j = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "FF07" })); y
+./cz/zdenekhorak/mibandtools/b/n.java:41:  public static final UUID k = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "FF08" }));
+./cz/zdenekhorak/mibandtools/b/n.java:42:  public static final UUID l = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "FF09" })); y
+./cz/zdenekhorak/mibandtools/b/n.java:43:  public static final UUID m = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "FF0A" }));
+./cz/zdenekhorak/mibandtools/b/n.java:44:  public static final UUID n = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "FF0B" }));
+./cz/zdenekhorak/mibandtools/b/n.java:45:  public static final UUID o = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "FF0C" })); y
+./cz/zdenekhorak/mibandtools/b/n.java:46:  public static final UUID p = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "FF0D" }));
+./cz/zdenekhorak/mibandtools/b/n.java:47:  public static final UUID q = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "FF0E" }));
+./cz/zdenekhorak/mibandtools/b/n.java:48:  public static final UUID r = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "FF0F" })); y
+./cz/zdenekhorak/mibandtools/b/n.java:49:  public static final UUID s = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "1802" }));
+./cz/zdenekhorak/mibandtools/b/n.java:50:  public static final UUID t = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "2A06" }));
+./cz/zdenekhorak/mibandtools/b/n.java:51:  public static final UUID u = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "180D" }));
+./cz/zdenekhorak/mibandtools/b/n.java:52:  public static final UUID v = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "2A37" }));
+./cz/zdenekhorak/mibandtools/b/n.java:53:  public static final UUID w = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "2A39" }));
+./cz/zdenekhorak/mibandtools/b/n.java:54:  public static final UUID x = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "2901" }));
+./cz/zdenekhorak/mibandtools/b/n.java:55:  public static final UUID y = UUID.fromString(String.format("0000%s-0000-1000-8000-00805f9b34fb", new Object[] { "2902" }));
+	 */
 	// BLUETOOTH
 	private String mDeviceAddress;
 	private BluetoothManager mBluetoothManager;

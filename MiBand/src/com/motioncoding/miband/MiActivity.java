@@ -63,7 +63,7 @@ public class MiActivity extends Activity implements LeScanCallback {
 	@Override
 	public void onLeScan(BluetoothDevice device, int rssi, byte[] scanRecord) {
 		if (device != null && device.getName() != null
-				& device.getName().equals("MI")) {
+				& device.getName().equals("MI1A")) {
 			System.out.println(device.getAddress());
 			scanLeDevice(false); // we only care about one miband so that's
 									// enough
